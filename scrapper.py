@@ -71,19 +71,19 @@ def beautifulsoup_html_parsing(url, place, html_content):
             # regex here  'We31.03h' add logic for date time with the 31 and get regex for .03h = 3 -godzina
             day_array.append()
             hour_array.append()
-        if index < 220:
+        elif index < 220:
             normal_wind_array.append(array_of_clear_data[index])
-        if index < 330:
+        elif index < 330:
             gust_wind_array.append(array_of_clear_data[index])
-        if index < 440:
+        elif index < 440:
             # regex here delete the ° from '288°'
             wind_direction_array.append()
-        if index < 550:
+        elif index < 550:
             temperature_array.append(array_of_clear_data[index])
-        if index < 660:
+        elif index < 660:
             # chyba regex ogarnac te gowno '70\xa05', '69\xa0\xa0', '99\xa0\xa0', '46279', '1007832', '1008348'
             cloud_cover_array.append(array_of_clear_data[index])
-        if index < 770:
+        elif index < 770:
             # regex exlude '\xa0'
             rain_array.append(array_of_clear_data[index])
 
