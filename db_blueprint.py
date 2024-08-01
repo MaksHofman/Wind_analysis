@@ -20,10 +20,12 @@ def creating_db_wind_data(c, conn):
             normal_wind INTEGER NOT NULL,
             gust_wind INTEGER NOT NULL,
             wind_direction INTEGER NOT NULL,
+            wave_height FLOAT NOT NULL,
+            wave_period INTEGER NOT NULL,
+            wave_direction INTGER NOT NULL,
             temperature INTEGER NOT NULL,
             cloud_cover INTEGER NOT NULL,
-            rain FLOAT NOT NULL, 
-            FOREIGN KEY (site) REFERENCES sites
+            rain FLOAT NOT NULL
             )
             ''')
         conn.commit()
